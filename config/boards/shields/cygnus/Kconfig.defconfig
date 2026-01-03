@@ -1,4 +1,4 @@
-if SHIELD_horizon_CENTRAL_DONGLE || SHIELD_horizon_CENTRAL_LEFT
+if SHIELD_cygnus_central_dongle || SHIELD_cygnus_central_left
 
 config ZMK_KEYBOARD_NAME
     default "horizon"
@@ -39,7 +39,7 @@ endchoice
 
 endif
 
-if SHIELD_horizon_CENTRAL_DONGLE || SHIELD_horizon_CENTRAL_LEFT || SHIELD_horizon_PERIPHERAL_LEFT 
+if SHIELD_cygnus_central_dongle || SHIELD_cygnus_central_left || SHIELD_horizon_PERIPHERAL_LEFT 
 
 config ZMK_SPLIT
     default y
