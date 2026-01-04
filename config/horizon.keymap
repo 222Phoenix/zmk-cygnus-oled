@@ -378,7 +378,14 @@ macros {
         #binding-cells = <0>;
         bindings
         = <&macro_tap_time 100>, <&macro_tap &mmv MOVE_X(10000)>;            
-    };    
+    };
+    pinch: pinch {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings
+        = <&macro_tap &mkp LCLK>,
+          <&macro_tap &to 0>;
+        };    
   };
 };
 
@@ -529,7 +536,7 @@ macros {
         compatible = "zmk,keymap";
 
         0 { 
-            display-name = "QWERTY";
+            display-name = "QWERT";
             bindings = <
                 &kp TAB    &kp Q      &kp W      &kp E      &kp R      &kp T                            &kp Y      &kp U      &kp I      &kp O      &kp P      &kp BSPC
                 &kp LSHFT  &asp       &kp S      &kp D      &kp F      &kp G                            &kp H      &kp J      &kp K      &kp L      SLCN       &quot
@@ -549,7 +556,7 @@ macros {
         };
 
         2 { 
-            display-name = "MOUSEKEYS";
+            display-name = "MOUSE";
             bindings = <
                 &trans     &trans     &jumpl     MS_U       &ms_jrr    &scruu                           &trans     &tdltb     COPPST     &tdrtb     &trans     &trans
                 &trans     &trans     &ms_ll     MS_D       MS_R       SCR_D                            &trans     &lclick    &tdmck     &rck       &kp PSCRN  &trans
@@ -559,7 +566,7 @@ macros {
         };        
 
         3 { 
-            display-name = "NUM & FUNC";
+            display-name = "NM+FN";
             bindings = <
                 &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &kp F6                           &trans     &kp N7     &kp N8     &kp N9     &kp MINUS  &trans
                 &kp F7     &kp F8     &kp F9     &kp F10    &kp F11    &kp F12                          &trans     &kp N4     &kp N5     &kp N6     &kp PLUS   &trans
@@ -569,7 +576,7 @@ macros {
         };
 
         4 { 
-            display-name = "SYMBOLS";
+            display-name = "SYMBOL";
             bindings = <
                 &kp TILDE  &tdlpar    &trans     CAD        &trans     &trans                           &trans     &kp KP_NUM &kp CAPS   &kp SLCK   &tdrpar    &trans
                 &kp TILDE  &kp EXCL   &kp AT     &kp HASH   &kp DLLR &kp PRCNT                          &kp CARET  &kp AMPS   &kp ASTRK  &trans     &trans     &trans
@@ -579,7 +586,7 @@ macros {
         };
 
         5 { 
-            display-name = "BT CONFIG";
+            display-name = "BT CFG";
             bindings = <
                 &trans     &trans     &trans     &trans     &trans     &trans                           &trans     BTUSB      &trans     &trans     &trans     &soft_off
                 &trans     BTCLRA     &trans     &trans     &trans     &trans                           &trans     BT1        BT2        BT3        BT4        BT5 
@@ -589,7 +596,7 @@ macros {
         };
 
         6 { 
-            display-name = "SCROLLING";
+            display-name = "SCROLL";
             bindings = <
                 &trans     &trans     &trans     SCR_U      &trans     &scruu                           &trans     &tdltb     COPPST     &tdrtb     &trans     &trans
                 &trans     &trans     SCR_L      SCR_D      SCR_R      SCR_D                            &trans     &lclick    &tdmck     &rck       &kp PSCRN  &trans
@@ -599,12 +606,12 @@ macros {
         };
 
         7 { //4 way jumping
-            display-name = "JUMPING";
+            display-name = "JUMP";
             bindings = <
                 &trans     &trans     &trans     &jumpu     &trans     &scruu                           &trans     &tdltb     COPPST     &tdrtb     &trans     &trans
-                &trans     &trans     &jumpl     &jumpd     &jumpr     SCR_D                            &trans     &lclick    &tdmck     &rck       &kp PSCRN  &trans
+                &trans     &trans     &jumpl     &jumpd     &jumpr     SCR_D                            &trans     &pinch     &tdmck     &rck       &kp PSCRN  &trans
                 &trans     &trans     vold       volu       &trans     &dashm     &trans     &trans     &kp PG_UP  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &trans
-                &trans     &kp Z     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans                 
+                &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans                 
             >;
         };
 
