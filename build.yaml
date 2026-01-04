@@ -16,12 +16,17 @@ include:
   - board: nice_nano_v2
     shield: horizon_central_dongle dongle_display
     artifact-name: horizon_central_dongle
+
   - board: nice_nano_v2
     shield: horizon_central_left
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
     artifact-name: horizon_central_left
+
   - board: nice_nano_v2
     shield: horizon_peripheral_left
+    cmake-args: -DCONFIG_ZMK_SPLIT=n -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
     artifact-name: horizon_peripheral_left
+
   - board: nice_nano_v2
     shield: settings_reset
 
