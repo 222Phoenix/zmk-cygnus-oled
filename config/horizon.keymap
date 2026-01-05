@@ -310,8 +310,8 @@ macros {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         bindings
-//        = <&macro_tap &mkp LCLK &kp RIGHT &kp RIGHT &kp MINUS &kp TAB>; //wireless
-          = <&macro_tap &kp MINUS &kp TAB>; //wired           
+            = <&macro_tap &mkp LCLK &kp RIGHT &kp RIGHT &kp MINUS &kp TAB>; //wireless
+//          = <&macro_tap &kp MINUS &kp TAB>; //wired           
     };
     find: find {
         compatible = "zmk,behavior-macro";
