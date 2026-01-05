@@ -23,9 +23,9 @@ include:
     artifact-name: horizon
 
   - board: nice_nano_v2
-    shield: horizon_peripheral_left
+    shield: horizon_bt
     cmake-args: -DCONFIG_ZMK_SPLIT=n -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
-    artifact-name: horizon_peripheral_left
+    artifact-name: horizon_bt
 
   - board: nice_nano_v2
     shield: settings_reset

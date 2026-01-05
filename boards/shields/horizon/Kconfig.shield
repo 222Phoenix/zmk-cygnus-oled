@@ -7,7 +7,7 @@ config SHIELD_horizon_dongle_display
 config SHIELD_horizon
     def_bool $(shields_list_contains,horizon)
     
-config SHIELD_horizon_PERIPHERAL_LEFT
-    def_bool $(shields_list_contains,horizon_peripheral_left)
+config SHIELD_horizon_bt
+    def_bool $(shields_list_contains,horizon_bt)
 
 
