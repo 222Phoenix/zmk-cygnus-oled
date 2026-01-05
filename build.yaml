@@ -14,13 +14,13 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: horizon_central_dongle dongle_display
-    artifact-name: horizon_central_dongle
+    shield: horizon_dongle_display dongle_display
+    artifact-name: horizon_dongle_display
 
   - board: nice_nano_v2
-    shield: horizon_central_left
+    shield: horizon
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
-    artifact-name: horizon_central_left
+    artifact-name: horizon
 
   - board: nice_nano_v2
     shield: horizon_peripheral_left

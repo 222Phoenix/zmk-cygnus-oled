@@ -586,7 +586,7 @@ macros {
         };
 
         5 { 
-            display-name = "BT CFG";
+            display-name = "BTCFG";
             bindings = <
                 &trans     &trans     &trans     &trans     &trans     &trans                           &trans     BTUSB      &trans     &trans     &trans     &soft_off
                 &trans     BTCLRA     &trans     &trans     &trans     &trans                           &trans     BT1        BT2        BT3        BT4        BT5 

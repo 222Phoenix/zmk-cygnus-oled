@@ -1,11 +1,11 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-config SHIELD_horizon_central_dongle
-    def_bool $(shields_list_contains,horizon_central_dongle)
+config SHIELD_horizon_dongle_display
+    def_bool $(shields_list_contains,horizon_dongle_display)
 
-config SHIELD_horizon_central_left
-    def_bool $(shields_list_contains,horizon_central_left)
+config SHIELD_horizon
+    def_bool $(shields_list_contains,horizon)
     
 config SHIELD_horizon_PERIPHERAL_LEFT
     def_bool $(shields_list_contains,horizon_peripheral_left)
