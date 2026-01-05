@@ -1,6 +1,3 @@
-//newest fw, not loaded yet. jump lyr, and tilde
-//added test this CONFIG_ZMK_HID_INDICATORS=y
-
 //if plugged in, it will always be charging. can't not, w/o a power switch. 
 //to use wired with deskhop, disconnect/remove BT from pc first. 
 
@@ -310,7 +307,8 @@ macros {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         bindings
-            = <&macro_tap &mkp LCLK &kp RIGHT &kp RIGHT &kp MINUS &kp TAB>; //wireless
+//          = <&macro_tap &mkp LCLK &kp RIGHT &kp RIGHT &kp MINUS &kp TAB>; //wireless. broken doesn't left click. 
+            = <&macro_tap &mkp LCLK>, <&macro_wait_time 75>, <&macro_tap &kp RIGHT &kp RIGHT &kp MINUS &kp TAB>;
 //          = <&macro_tap &kp MINUS &kp TAB>; //wired           
     };
     find: find {
