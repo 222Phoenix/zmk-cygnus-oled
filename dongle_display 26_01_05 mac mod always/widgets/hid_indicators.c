@@ -7,9 +7,6 @@
 #include <zephyr/kernel.h>
 #include <zephyr/bluetooth/services/bas.h>
 
-#include <zephyr/logging/log.h>
-LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
-
 #include <zmk/display.h>
 #include <zmk/event_manager.h>
 #include <zmk/events/hid_indicators_changed.h>
@@ -31,19 +28,19 @@ static void set_hid_indicators(lv_obj_t *label, struct hid_indicators_state stat
     bool lock = false;
 
     if (state.hid_indicators & LED_CLCK) {
-        strncat(text, "C", 2);
+        strncat(text, "C", 1);
         lock = true;
     }
     if (state.hid_indicators & LED_NLCK) {
-        strncat(text, "N", 2);
+        strncat(text, "N", 1);
         lock = true;
     }
     if (state.hid_indicators & LED_SLCK) {
-        strncat(text, "S", 2);
+        strncat(text, "S", 1);
         lock = true;
     }
     if (lock) {
-        strncat(text, "LCK", 4);
+        strncat(text, "LCK", 3);
     }
 
     lv_label_set_text(label, text);
