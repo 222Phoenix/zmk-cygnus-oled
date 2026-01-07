@@ -307,8 +307,7 @@ macros {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         bindings
-//          = <&macro_tap &mkp LCLK &kp RIGHT &kp RIGHT &kp MINUS &kp TAB>; //wireless. broken doesn't left click. 
-            = <&macro_tap &mkp LCLK>, <&macro_wait_time 75>, <&macro_tap &kp RIGHT &kp RIGHT &kp MINUS &kp TAB>;
+            = <&macro_tap &mkp LCLK &kp RIGHT &kp RIGHT &kp MINUS &kp TAB>; //wireless. broken doesn't left click. 
 //          = <&macro_tap &kp MINUS &kp TAB>; //wired           
     };
     find: find {
@@ -534,7 +533,7 @@ macros {
         compatible = "zmk,keymap";
 
         0 { 
-            display-name = "QWERT";
+            display-name = "QWERTY";
             bindings = <
                 &kp TAB    &kp Q      &kp W      &kp E      &kp R      &kp T                            &kp Y      &kp U      &kp I      &kp O      &kp P      &kp BSPC
                 &kp LSHFT  &asp       &kp S      &kp D      &kp F      &kp G                            &kp H      &kp J      &kp K      &kp L      SLCN       &quot
@@ -564,7 +563,7 @@ macros {
         };        
 
         3 { 
-            display-name = "NM+FN";
+            display-name = "NUM + FUN";
             bindings = <
                 &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &kp F6                           &trans     &kp N7     &kp N8     &kp N9     &kp MINUS  &trans
                 &kp F7     &kp F8     &kp F9     &kp F10    &kp F11    &kp F12                          &trans     &kp N4     &kp N5     &kp N6     &kp PLUS   &trans
@@ -574,7 +573,7 @@ macros {
         };
 
         4 { 
-            display-name = "SYMBOL";
+            display-name = "SYMBOLS";
             bindings = <
                 &kp TILDE  &tdlpar    &trans     CAD        &trans     &trans                           &trans     &kp KP_NUM &kp CAPS   &kp SLCK   &tdrpar    &trans
                 &kp TILDE  &kp EXCL   &kp AT     &kp HASH   &kp DLLR &kp PRCNT                          &kp CARET  &kp AMPS   &kp ASTRK  &trans     &trans     &trans
@@ -584,7 +583,7 @@ macros {
         };
 
         5 { 
-            display-name = "BLUET";
+            display-name = "BLUETOOTH";
             bindings = <
                 &trans     &trans     &trans     &trans     &trans     &trans                           &trans     BTUSB      &trans     &trans     &trans     &soft_off
                 &trans     BTCLRA     &trans     &trans     &trans     &trans                           &trans     BT1        BT2        BT3        BT4        BT5 
@@ -604,7 +603,7 @@ macros {
         };
 
         7 { //4 way jumping
-            display-name = "JUMP";
+            display-name = "JUMPS";
             bindings = <
                 &trans     &trans     &trans     &jumpu     &trans     &scruu                           &trans     &tdltb     COPPST     &tdrtb     &trans     &trans
                 &trans     &trans     &jumpl     &jumpd     &jumpr     SCR_D                            &trans     &pinch     &tdmck     &rck       &kp PSCRN  &trans
