@@ -1,4 +1,4 @@
-if SHIELD_horizon_dongle_display || SHIELD_horizon || horizon_bt
+if SHIELD_horizon_dongle_display || SHIELD_horizon_with || horizon_without
 
 config ZMK_KEYBOARD_NAME
     default "horizon"
@@ -39,7 +39,7 @@ endchoice
 
 endif
 
-if SHIELD_horizon_dongle_display || SHIELD_horizon || horizon_bt 
+if SHIELD_horizon_dongle_display || SHIELD_horizon_with || horizon_without 
 
 config ZMK_SPLIT
     default y

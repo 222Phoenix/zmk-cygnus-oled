@@ -18,14 +18,14 @@ include:
     artifact-name: horizon_dongle_display
 
   - board: nice_nano_v2
-    shield: horizon
+    shield: horizon_with
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
-    artifact-name: horizon
+    artifact-name: horizon_with
 
   - board: nice_nano_v2
-    shield: horizon_bt
+    shield: horizon_without
     cmake-args: -DCONFIG_ZMK_SPLIT=n -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
-    artifact-name: horizon_bt
+    artifact-name: horizon_without
 
   - board: nice_nano_v2
     shield: settings_reset

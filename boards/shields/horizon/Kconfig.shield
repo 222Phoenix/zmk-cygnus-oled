@@ -4,10 +4,10 @@
 config SHIELD_horizon_dongle_display
     def_bool $(shields_list_contains,horizon_dongle_display)
 
-config SHIELD_horizon
+config SHIELD_horizon_with
     def_bool $(shields_list_contains,horizon)
     
-config SHIELD_horizon_bt
-    def_bool $(shields_list_contains,horizon_bt)
+config SHIELD_horizon_without
+    def_bool $(shields_list_contains,horizon_without)
 
 
